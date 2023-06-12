@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+       
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox by tradewise </title>
+</head>
+<body>
+
+    <div class="box">
+        <div class="mini">
+
+        </div>
+
+
+        <div class="mini">
+            <style>
+             .dropdown .btn{background:red}
+         .but a{text-align:center;
+          margin-left:6%;
+          border-radius:10px;
+          text-decoration:none;
+          background:blue;
+          color:white;
+          } 
+          body{
+          background: radial-gradient(ellipse at right bottom, pink 5%, #d42dab 25%, #4d1d63 40%, #030243 45%);
+          
+          
+          
+          
+          
+          /* radial-gradient(ellipse at right bottom, #EEB1BF 56%, #d42dab 25%,#4d1d63 70%, #030243 10%);
+           url("https://img.myloview.com/stickers/abstract-light-blue-fractal-wave-design-space-wallpaper-pattern-backdrop-technology-science-black-concept-texture-element-motion-illustration-effect-composition-dynamic-arrangemen-400-306094968.jpg");*/
+          //background-attachment: fixed;
+         background:cover;
+          /*radial-gradient(ellipse at right bottom, #EEB1BF 5%, #d42dab 25%, #4d1d63 50%, #030243 100%);
+          */
+          
+          
+          
+        
+       font-family: "Open Sans";
+       font-size: 1.25rem  ;
+          
+          
+margin-left:15px ;
+
+
+}
+          
+          } 
+          /*.fl{
+               display:inline;
+              // float:left;
+          } 
+         .fl .flo{
+               float:left;
+          } */
+          .dp{
+               display:inline;
+               float:right;
+          }
+          .footer h4
+         {
+               text-align:center; 
+               font-size:15px;
+          }
+            .logoo img {width: 8%;
+        margin-top: 5px;
+       // margin:2px;
+        border-radius:100px;
+        margin-left:5px;
+         text-align:center; 
+   }
+   iframe{
+        margin-left:10px;
+   }
+      </style><form>
+           <div class="fl"> 
+                <div class="flo">
+      <div class="but p-2 g-col-6">
+   <a href="index.html"> &nbsp &nbspView 📥 </a>
+   <a href="db.html">&nbsp Message📤&nbsp </a>
+   
+  
+   <!-- 
+   <div class="dropdown-center dp">
+ <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  SMS
+ </button>
+ <ul class="dropdown-menu">
+   <li><iframe style="padding:-50%;" src="message.html" height="300px" >Loading…</iframe>
+ </li>
+ </ul>
+</div>
+
+-->
+     <!-- 
+     
+     card text-bg-primary mb-3 card-header
+     <h5 class="card-title">Best broker app for fast trade </h5>
+   <p class="card-text"><a href="https://www.5paisa.com/landing/partners-elite?rcode=NTM3NzM4NDY">Open new demat account</a></p>
+ </div>
+</div>
+<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+ <div class="card-header">Dhan </div>
+ <div class="card-body">
+   <h5 class="card-title"> ₹0 Demat Account Fees ₹0 AMC | ₹10 for Intraday for women investor </h5>
+     
+      -->
+
+
+  
+   
+   </div>
+  <!--   <br>
+   <br>
+   <br><br>
+   <br>
+   <br><br><br>
+   <br>
+    -->
+   
+   
+   
+  
+        
+    
+     
+           
+      
+      
+      
+    <div id="content"></div>
+    </div>
+    <div class="flo">
+    <script>
+      //https://docs.google.com/spreadsheets/d/13-yh75noC6nNsWef1hAYYw49l414c6GQ_HY63JIvg8U/edit?usp=sharing
+      //https://docs.google.com/spreadsheets/d/14WtCTT1yBcvza4lp90-8uBSj4equHRm-FqYoS9D2RmM/edit?usp=sharing
+      const sheet_id = "14WtCTT1yBcvza4lp90-8uBSj4equHRm-FqYoS9D2RmM";
+      fetch(`https://docs.google.com/spreadsheets/d/${sheet_id}/export?format=tsv`).
+        then(response => response.text()).
+          then(txt => {
+            const sheet = txt.split("\r\n").map(r => r.split('\t'));
+            let html = "";
+            for (let i = sheet.length-1; i>0; i--) {
+              html += `
+              <style>p{color: red;} 
+              h3{display:inline;}
+              .box p{
+              padding-right:25px;
+                   text-align:left; 
+              }
+      .box  h3{text-align::left;
+      
+      //margin-left:50%;
+      }
+      .box span{
+           font-size:6px;
+           
+      }
+              </style>
+         <div style="color:white;" class="box  border-info card text-bg-light mb-1 ">
+                <h3>${sheet[i][2]}</h3>
+                  
+  <!-- <small>${sheet[i][]}</small> 
+   
+     <span>( ${sheet[i][2]} )</span>
+                 
+             <p>${sheet[i][1]}</p>-->
+              </div>
+           
+              <br>
+              
+              
+              `;
+            }
+            document.querySelector("div#content").innerHTML = html;
+      });
+    </script>
+    
+    </div></div>
+        </div>
+    </div>
+    
+    <style>
+       iframe, .box{
+            display: inline;
+            
+        }
+        iframe, .mini{
+            float:left;
+          //  width:60%;
+        }
+    </style>
+</body>
+</html>

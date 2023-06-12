@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>only for Admin </title>
+    <style>
+        fieldset {
+            position: center;
+            margin: 13%;
+        }
+        input {
+            width: 30%;
+            font-size: 38px;
+            height: 45px;
+            margin: 10px;
+        }
+        .admin {
+            text-align: center;
+            background-color: rgb(1, 2, 28);
+            color: rgba(255, 187, 0, 0.849);
+            margin: 0;
+        }
+        .submits {
+            width: 30%;
+            height: 45px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+            font-size: 25px;
+        }
+        body {
+            background-color: rgb(0, 0, 0);
+            background-image: url("https://wallpapercrafter.com/desktop/149384-digital-digital-art-artwork-illustration-drawing-painting-digital-painting-landscape-dark-planet-fantasy-art-science-fiction-sky-calm-krita-wood-apocalyptic-ruin-ruins.jpg");
+        }
+        .ff{
+            text-align: center; border: a1px solid rgba(166, 7, 63, 0.352); margin: 0 -5px -5px -5px; padding: 7zspx; position: center; line-height: 1.3em;  background-color: rgb(6, 1, 32);
+        }
+    </style>
+</head>
+<body>
+    
+    {% if error %}
+        <p style="color: red;">Invalid username or password</p>
+    {% endif %}
+    <fieldset>
+        <h1 class="admin">Admin Dashboard login</h1> <form  action="login"class="ff" method="POST">
+            <input type="text" class="Name" placeholder="Name" name="username"><br>
+            <input type="password" class="Email" placeholder="Phone No." name="password"><br>
+            <input type="Submit" id="btnSubmit" class="submits" style="background: MediumSlateBlue;" value="login">
+        </form>
+    </fieldset>
+    <br>
+   
+    <br>
+  
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <title>traderharish An index trader & Programmer </title>
+</head>
+<style>
+     a{
+     margin-bottom  : 45px;}
+     .but input, .but a{
+     
+          text-align:center; 
+          margin-left:30px;
+     }
+     #btnSubmit{
+          text-align:center; 
+          margin-left:15%;
+          color:rgb(0, 0, 0);
+          background: rgb(12, 228, 9);
+          
+          
+     }
+     *{
+          background: ;
+          //border: 1px solid black;
+     }
+     .y{
+          margin-bottom   : 20px; 
+          margin-top   : 10px; 
+          border-radius:23px;
+          width: 65%;
+     }
+     input {
+          border: 2px solid deeppink;
+          background: black;
+          color:red;
+     }
+     textarea{
+       // width:75%;
+       // height:90vh;
+     }
+     
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">Crypto & stocks</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-4 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="indexs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cryptoo">Crypto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news">Cryptocurriences News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="world">world Stock markets</a>
+          </li>
+          
+
+
+ <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://kite.zerodha.com/">Zerodha</a></li>
+            <li><a class="dropdown-item" href="https://login.upstox.com/">Upstox</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="https://groww.in/">Grow</a></li>
+            <li><a class="dropdown-item" href="https://accounts.binance.com/en/login?return_to=aHR0cHM6Ly93d3cuYmluYW5jZS5jb20vZW4vdmlwLXBvcnRhbA==">Binance</a></li>
+          </ul>
+        </li> <li class="nav-item">
+
+          <li class="nav-item">
+            <a class="nav-link" href="chat">chat with traders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="viewmsg">chat Reply to traders</a>
+          </li>
+       
+       
+       
+          
+        </ul>
+        
+        <form class="d-flex" role="search">Upstox&nbsp;
+          <input class="form-control me-2" type="search" placeholder="future & Option Trading " aria-label="Search">
+         
+          <a class="btn btn-outline-success" href="https://upstox.com/open-demat-account/?f=4WBMU4">Start</a>
+        </form>
+        
+      </div>
+    </div>
+  </nav>
+     
+  
+       
+       
+       
+       
+       
+         
+  
+   
+
+ <form action="" id="frmSubmit" method="post">   
+     <div class="fl"> 
+                   <div class="flo">
+         <div class="but p-2 g-col-6">
+    
+
+<br>
+
+<input type="text" style="width: 100%;" required class="pagination" placeholder="Enter message" maxwidth="3000" maxlength="14000" name="Message" id="">
+
+<button type="submit" class="y" id="btnSubmit">Submit</button>
+
+<div id="msg"></div><br>
+</form>
+<script>
+    jQuery('#frmSubmit').on('submit',function(e){
+      e.preventDefault();
+      jQuery('#msg').html('Please wait...');
+      jQuery('#btnSubmit').attr('disabled',true);
+      jQuery.ajax({
+          url:'https://script.google.com/macros/s/AKfycbyCmU0Cw2jSaGOdzS7OvzafsuaTLd2LfK-rfN9-IUWlf691rxltbpZtGgZxRIYgINEfIA/exec',
+          type:'post',
+          data:jQuery('#frmSubmit').serialize(),
+          success:function(result){
+              jQuery('#frmSubmit')[0].reset();
+              jQuery('#msg').html('Thank You , form submitted ');
+              jQuery('#btnSubmit').attr('disabled',false);
+            //window.location.href='';
+          }
+      });
+    });
+    </script>
+    <style>
+        body{
+            background: url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+    </style>
+</body>
+</html>

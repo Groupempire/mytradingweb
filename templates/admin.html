@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>only for Admin </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1> Admin </h1><ul>
+        <li><a href="register">Login</a></li>
+        <li><a href="logout">logout</a></li>
+    </ul>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+             <th>Email</th>
+            <th>whatsapp messsage</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+              <td><a href="mailto:{{ row[3] }}?subject=Predefined%20Subject&body=Hello%20Admin,%0D%0A%0D%0AThis%20is%20a%20predefined%20template%20text%20for%20the%20email.%0D%0A%0D%0ARegards,%0D%0A{{ row[1] }}">{{ row[3] }}</a></td>
+       <td>
+                <a href="https://api.whatsapp.com/send?phone={{ row[2] }}&text=thank you for using traderharish" target="_blank">Send WhatsApp</a>
+            </td>
+        </tr>
+        {% endfor %}
+   
+    </table>
+    
+</body>
+</html>
