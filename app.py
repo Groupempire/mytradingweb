@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 auth = HTTPBasicAuth()
 users = {
-    "admin": "passwordhu"
+    "admin": "password"
 }
 
 db = mysql.connector.connect(
